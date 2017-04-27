@@ -28,7 +28,7 @@ buttonObject keys:
 - bold, boolean
 - disable, boolean
 - label, boolean
-- handle, function, a data object which contains selectedIndex, selectedParentIndex and button will be passed in
+- handle, function, a data object which contains selectedIndex, selectedGroupIndex and button will be passed in
 
 an example of buttonObject
 
@@ -41,7 +41,7 @@ an example of buttonObject
     label: false,
     handle: function(data){
         // data.selectedIndex
-        // data.selectedParentIndex
+        // data.selectedGroupIndex
         // data.button
     }
 }
@@ -66,7 +66,7 @@ new Vue({
         text: 'title'
       }, {
         text: 'title1',
-      }]).then(({button, selectedIndex, selectedParentIndex}) => {
+      }]).then(({button, selectedIndex, selectedGroupIndex}) => {
 
       })
     }

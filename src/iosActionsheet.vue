@@ -2,8 +2,8 @@
   <transition @after-leave="afterLeave">
     <div class="ios-actionsheet-overlay" v-if="showModal" @click="deactivate">
       <div class="ios-actionsheet">
-        <div class="ios-actionsheet-group" v-for="(group, parentIndex) in groups">
-          <div v-for="(button, index) in group" @click.stop.prevent="onClick(button, index, parentIndex)" :class="{'ios-actionsheet-label': button.label, 'ios-actionsheet-button': !button.label, 'ios-actionsheet-button-color': button.color, 'ios-actionsheet-button-bold': button.bold, 'ios-actionsheet-button-disable': button.disable}">{{ button.text }}</div>
+        <div class="ios-actionsheet-group" v-for="(group, groupIndex) in groups">
+          <div v-for="(button, index) in group" @click.stop.prevent="onClick(button, index, groupIndex)" :class="{'ios-actionsheet-label': button.label, 'ios-actionsheet-button': !button.label, 'ios-actionsheet-button-color': button.color, 'ios-actionsheet-button-bold': button.bold, 'ios-actionsheet-button-disable': button.disable}">{{ button.text }}</div>
         </div>
       </div>
     </div>
@@ -32,16 +32,16 @@ export default {
       this.showModal = false;
       this._deferred.reject();
     },
-    onClick: function(button, selectedIndex, selectedParentIndex){
+    onClick: function(button, selectedIndex, selectedGroupIndex){
       if(button.disable || button.label){
         return;
       }
 
       if(button.handle){
-        button.handle({button, selectedIndex, selectedParentIndex});
+        button.handle({button, selectedIndex, selectedGroupIndex});
       }
 
-      this._deferred.resolve({button, selectedIndex, selectedParentIndex});
+      this._deferred.resolve({button, selectedIndex, selectedGroupIndex});
 
       this.showModal = false;
 
