@@ -19,7 +19,7 @@ Promise
 vm.$iosActionsheet(buttonGruop[, buttonGroup, buttonGroup ...])
 ```
 
-buttonGroup = buttonObject | Array<buttonObject>
+buttonGroup = buttonObject | buttonObject[]
 
 buttonObject keys:
 
