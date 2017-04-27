@@ -1,6 +1,6 @@
 ## vue-ios-actionsheet
 
-> iOS7+ style alertview service for Vue 2
+> iOS7+ style actionsheet service for Vue 2
 
 Vue port of [angular-ios-actionsheet](https://github.com/Treri/angular-ios-actionsheet).
 
