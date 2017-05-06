@@ -1,6 +1,6 @@
 {
   "name": "vue-ios-actionsheet",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "iOS7+ style actionsheet service for Vue",
   "main": "dist/vue-ios-actionsheet.js",
   "types": "types/index.d.ts",
