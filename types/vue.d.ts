@@ -1,20 +1,6 @@
 import Vue = require('vue');
 
-interface buttonData {
-  button: buttonObject;
-  selectedIndex: number;
-  selectedGroupIndex: number;
-}
-
-interface buttonObject {
-  text: string;
-  color?: boolean;
-  bold?: boolean;
-  disable?: boolean;
-  label?: boolean;
-  handle?: (buttonData: buttonData) => any;
-  [key: string]: any;
-}
+import {buttonData, buttonObject} from './index';
 
 declare module 'vue/types/vue' {
   interface Vue {
