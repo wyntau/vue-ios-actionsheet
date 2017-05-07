@@ -64,10 +64,7 @@ var IosActionsheetDefine = {render: function(){var _vm=this;var _h=_vm.$createEl
       }
 
       this._deferred.resolve({button: button, selectedIndex: selectedIndex, selectedGroupIndex: selectedGroupIndex});
-
       this.showModal = false;
-
-      console.log(this.showModal);
     },
     afterLeave: function(){
       this.$destroy();
