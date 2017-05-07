@@ -42,10 +42,7 @@ export default {
       }
 
       this._deferred.resolve({button, selectedIndex, selectedGroupIndex});
-
       this.showModal = false;
-
-      console.log(this.showModal)
     },
     afterLeave: function(){
       this.$destroy();
