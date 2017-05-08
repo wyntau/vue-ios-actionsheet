@@ -1,12 +1,12 @@
 import defer from './defer.js';
-import IosActionsheetDefine from './iosActionsheet.vue';
+import IosActionSheetDefine from './iosActionSheet.vue';
 
 function install(Vue){
-  const IosActionsheetComponent = Vue.extend(IosActionsheetDefine);
+  const IosActionSheetComponent = Vue.extend(IosActionSheetDefine);
 
-  Vue.prototype.$iosActionsheet = function (...buttons){
+  Vue.prototype.$iosActionSheet = function (...buttons){
 
-    let instance = new IosActionsheetComponent({propsData: {buttons}});
+    let instance = new IosActionSheetComponent({propsData: {buttons}});
 
     let mount = document.createElement('div');
     mount.id = 'ios-actionsheet-' + Date.now();

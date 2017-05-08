@@ -16,7 +16,7 @@ Promise
 #### Usage
 
 ```js
-vm.$iosActionsheet(buttonGruop[, buttonGroup, buttonGroup ...])
+vm.$iosActionSheet(buttonGruop[, buttonGroup, buttonGroup ...])
 ```
 
 buttonGroup = buttonObject | buttonObject[]
@@ -51,15 +51,15 @@ an example of buttonObject
 
 ```js
 import Vue from 'vue';
-import vueIosActionsheet from 'vue-ios-actionsheet';
+import vueIosActionSheet from 'vue-ios-actionsheet';
 
-Vue.use(vueIosActionsheet);
+Vue.use(vueIosActionSheet);
 
 new Vue({
   el: '#container',
   methods: {
     actionsheet: function(){
-      this.$iosActionsheet({
+      this.$iosActionSheet({
         text: 'text1',
         label: true
       }, [{

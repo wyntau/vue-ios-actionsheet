@@ -2,10 +2,10 @@ import vue from 'rollup-plugin-vue';
 import buble from 'rollup-plugin-buble';
 
 export default {
-  entry: 'src/iosActionsheet.js',
+  entry: 'src/iosActionSheet.js',
   dest: 'dist/vue-ios-actionsheet.js',
   format: 'umd',
-  moduleName: 'vueIosActionsheet',
+  moduleName: 'vueIosActionSheet',
   exports: 'named',
 
   plugins: [
