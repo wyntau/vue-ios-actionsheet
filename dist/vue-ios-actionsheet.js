@@ -1,7 +1,7 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(factory((global.vueIosActionsheet = global.vueIosActionsheet || {})));
+	(factory((global.vueIosActionSheet = global.vueIosActionSheet || {})));
 }(this, (function (exports) { 'use strict';
 
 // a mini defer like angular's $q.defer()
@@ -35,7 +35,7 @@ var defer = function(){
 
 
 
-var IosActionsheetDefine = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{on:{"after-leave":_vm.afterLeave}},[(_vm.showModal)?_c('div',{staticClass:"ios-actionsheet-overlay",on:{"click":_vm.deactivate}},[_c('div',{staticClass:"ios-actionsheet"},_vm._l((_vm.groups),function(group,groupIndex){return _c('div',{staticClass:"ios-actionsheet-group"},_vm._l((group),function(button,index){return _c('div',{class:{'ios-actionsheet-label': button.label, 'ios-actionsheet-button': !button.label, 'ios-actionsheet-button-color': button.color, 'ios-actionsheet-button-bold': button.bold, 'ios-actionsheet-button-disable': button.disable},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();_vm.onClick(button, index, groupIndex);}}},[_vm._v(_vm._s(button.text))])}))}))]):_vm._e()])},staticRenderFns: [],
+var IosActionSheetDefine = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{on:{"after-leave":_vm.afterLeave}},[(_vm.showModal)?_c('div',{staticClass:"ios-actionsheet-overlay",on:{"click":_vm.deactivate}},[_c('div',{staticClass:"ios-actionsheet"},_vm._l((_vm.groups),function(group,groupIndex){return _c('div',{staticClass:"ios-actionsheet-group"},_vm._l((group),function(button,index){return _c('div',{class:{'ios-actionsheet-label': button.label, 'ios-actionsheet-button': !button.label, 'ios-actionsheet-button-color': button.color, 'ios-actionsheet-button-bold': button.bold, 'ios-actionsheet-button-disable': button.disable},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();_vm.onClick(button, index, groupIndex);}}},[_vm._v(_vm._s(button.text))])}))}))]):_vm._e()])},staticRenderFns: [],
   props: {
     buttons: [Array]
   },
@@ -89,14 +89,14 @@ var IosActionsheetDefine = {render: function(){var _vm=this;var _h=_vm.$createEl
 };
 
 function install(Vue){
-  var IosActionsheetComponent = Vue.extend(IosActionsheetDefine);
+  var IosActionSheetComponent = Vue.extend(IosActionSheetDefine);
 
-  Vue.prototype.$iosActionsheet = function (){
+  Vue.prototype.$iosActionSheet = function (){
     var buttons = [], len = arguments.length;
     while ( len-- ) buttons[ len ] = arguments[ len ];
 
 
-    var instance = new IosActionsheetComponent({propsData: {buttons: buttons}});
+    var instance = new IosActionSheetComponent({propsData: {buttons: buttons}});
 
     var mount = document.createElement('div');
     mount.id = 'ios-actionsheet-' + Date.now();
